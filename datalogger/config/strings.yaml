@@ -1,0 +1,38 @@
+strings:
+  # Inverter 1–3: SG110CX (18 strings mỗi inverter)
+  {% for inv_id in [1, 2, 3] %}
+  {% for mppt in range(1, 10) %}
+    {% for s in range(1, 3) %}
+  - id: {{ inv_id }}{{ mppt }}{{ s }}
+    inverter_id: {{ inv_id }}
+    mppt_id: {{ inv_id }}{{ mppt }}
+    string_index: {{ s }}
+    I_string: 0.0
+    Max_I: 13.0
+    V_string: 0.0
+    Max_V: 1100.0
+    P_string: 0.0
+    Max_P: 6100.0
+    status: active
+    installed_at: 2025-10-25T00:00:00Z
+    {% endfor %}
+  {% endfor %}
+  {% endfor %}
+
+  # Inverter 4: SG50CX (10 strings)
+  {% for mppt in range(1, 6) %}
+    {% for s in range(1, 3) %}
+  - id: 4{{ mppt }}{{ s }}
+    inverter_id: 4
+    mppt_id: 4{{ mppt }}
+    string_index: {{ s }}
+    I_string: 0.0
+    Max_I: 13.0
+    V_string: 0.0
+    Max_V: 1100.0
+    P_string: 0.0
+    Max_P: 3050.0
+    status: active
+    installed_at: 2025-10-27T00:00:00Z
+    {% endfor %}
+  {% endfor %}

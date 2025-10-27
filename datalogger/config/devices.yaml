@@ -1,0 +1,52 @@
+inverters:
+  - id: 1
+    serial_no: SG110CX001
+    project_id: 1
+    brand: Sungrow
+    model: SG110CX
+    fw_version: V1.0.0
+    phase_count: 3
+    mppt_count: 9
+    string_count: 18
+    rated_ac_kw: 110.0
+    rated_dc_4kwp: 132.0
+    installed_at: 2025-10-20T00:00:00Z
+
+  - id: 2
+    serial_no: SG110CX002
+    project_id: 1
+    brand: Sungrow
+    model: SG110CX
+    fw_version: V1.0.0
+    phase_count: 3
+    mppt_count: 9
+    string_count: 18
+    rated_ac_kw: 110.0
+    rated_dc_4kwp: 132.0
+    installed_at: 2025-10-21T00:00:00Z
+
+  - id: 3
+    serial_no: SG110CX003
+    project_id: 1
+    brand: Sungrow
+    model: SG110CX
+    fw_version: V1.0.0
+    phase_count: 3
+    mppt_count: 9
+    string_count: 18
+    rated_ac_kw: 110.0
+    rated_dc_4kwp: 132.0
+    installed_at: 2025-10-22T00:00:00Z
+
+  - id: 4
+    serial_no: SG50CX001
+    project_id: 1
+    brand: Sungrow
+    model: SG50CX
+    fw_version: V1.0.0
+    phase_count: 3
+    mppt_count: 5
+    string_count: 10
+    rated_ac_kw: 50.0
+    rated_dc_4kwp: 60.0
+    installed_at: 2025-10-27T00:00:00Z

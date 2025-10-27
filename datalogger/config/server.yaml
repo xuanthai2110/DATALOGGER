@@ -1,0 +1,24 @@
+server:
+  http:
+    enabled: true
+    endpoint: https://api.yourserver.com/upload
+    token: your_api_token_here
+    interval: 60
+
+  modbus_tcp:
+    enabled: true
+    port: 5020
+    slave_id: 1
+    register_map:
+      voltage: 100
+      current: 102
+      power: 104
+      energy_dayly: 120
+      energy_monthly: 122
+      energy_year: 124
+      error_code: 150
+
+  push_notification:
+    enabled: true
+    provider: firebase
+    api_key: your_firebase_key_here

@@ -1,0 +1,16 @@
+projects:
+  - id: 1
+    name: Nhà máy điện mặt trời SG-Demo
+    location: Ninh Thuận
+    lat: 11.567
+    lon: 108.999
+    capacity_kwp: 330
+    ac_capacity_kw: 330
+    inverter_count: 4
+    owner_user_id: 101
+    created_at: 2025-10-26T00:00:00Z
+    inverters:
+      - 1
+      - 2
+      - 3
+      - 4
