@@ -1,38 +1,39 @@
 strings:
-  # Inverter 1–3: SG110CX (18 strings mỗi inverter)
-  {% for inv_id in [1, 2, 3] %}
-  {% for mppt in range(1, 10) %}
-    {% for s in range(1, 3) %}
-  - id: {{ inv_id }}{{ mppt }}{{ s }}
+# SG110CX: 3 inverter × 9 MPPT × 2 strings
+{% for inv_id in [1, 2, 3] %}
+  {% for mppt_index in range(1, 10) %}
+    {% for string_index in range(1, 3) %}
+  - id: {{ inv_id }}{{ mppt_index }}{{ string_index }}
     inverter_id: {{ inv_id }}
-    mppt_id: {{ inv_id }}{{ mppt }}
-    string_index: {{ s }}
-    I_string: 0.0
-    Max_I: 13.0
+    mppt_id: {{ inv_id }}{{ mppt_index }}
+    string_index: {{ string_index }}
     V_string: 0.0
-    Max_V: 1100.0
+    I_string: 0.0
     P_string: 0.0
+    Max_I: 15.0
+    Max_V: 1100.0
     Max_P: 6100.0
-    status: active
-    installed_at: 2025-10-25T00:00:00Z
+    Max_P_string: 6100.0
+    string_on_mppt: 2
     {% endfor %}
   {% endfor %}
-  {% endfor %}
+{% endfor %}
 
-  # Inverter 4: SG50CX (10 strings)
-  {% for mppt in range(1, 6) %}
-    {% for s in range(1, 3) %}
-  - id: 4{{ mppt }}{{ s }}
+# SG50CX: 1 inverter × 5 MPPT × 2 strings
+{% for mppt_index in range(1, 6) %}
+  {% for string_index in range(1, 3) %}
+  - id: 4{{ mppt_index }}{{ string_index }}
     inverter_id: 4
-    mppt_id: 4{{ mppt }}
-    string_index: {{ s }}
-    I_string: 0.0
-    Max_I: 13.0
+    mppt_id: 4{{ mppt_index }}
+    string_index: {{ string_index }}
     V_string: 0.0
-    Max_V: 1100.0
+    I_string: 0.0
     P_string: 0.0
-    Max_P: 3050.0
-    status: active
-    installed_at: 2025-10-27T00:00:00Z
-    {% endfor %}
+    Max_I: 15.0
+    Max_V: 1100.0
+    Max_P: 6100.0
+    Max_P_string: 6100.0
+    string_on_mppt: 2
   {% endfor %}
+{% endfor %}
+

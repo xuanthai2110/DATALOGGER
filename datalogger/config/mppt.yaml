@@ -1,19 +1,21 @@
-mppt_channels:
-  # Inverter 1–3: SG110CX (9 MPPT mỗi inverter)
-  {% for inv_id in [1, 2, 3] %}
+strings:
+{% for inv_id in [1, 2, 3] %}
   {% for mppt in range(1, 10) %}
-  - id: {{ inv_id }}{{ mppt }}
+    {% for s in range(1, 3) %}
+  - id: {{ inv_id }}{{ mppt }}{{ s }}
     inverter_id: {{ inv_id }}
-    mppt_index: {{ mppt }}
-    string_on_mppt: 2
-    V_mppt: 0.0
-    I_mppt: 0.0
-    P_mppt: 0.0
-    Max_I: 26.0
+    mppt_id: {{ inv_id }}{{ mppt }}
+    Max_P: 6100.0
+    V_string: 0.0
+    I_string: 0.0
+    P_string: 0.0
+    string_index: {{ s }}
+    Max_I: 15.0
     Max_V: 1100.0
-    Max_P: 12200.0
+    Max_P_string: 6100.0
+    {% endfor %}
   {% endfor %}
-  {% endfor %}
+{% endfor %}
 
   # Inverter 4: SG50CX (5 MPPT)
   {% for mppt in range(1, 6) %}
